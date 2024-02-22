@@ -5,7 +5,7 @@ Pagination and Searching: The API provided does not support pagination or search
 
 Error Handling: Due to time constraints, the error handling is basic. It's something I acknowledge and would improve given more time.
 
-Styling Considerations: While I'm proficient in writing CSS, I must admit that I struggle with inventing styles from scratch. In the absence of a design file (e.g., XD or Figma), making a prototype becomes challenging.
+Styling Considerations: While I'm proficient in writing CSS, I must admit that I struggle with inventing styles from scratch. In the absence of a design file (e.g., XD or Figma), making a prototype becomes challenging and I didn't use any styling library since the implementation is simple and doesn't involve a lot of components.
 
 Areas for Improvement
 Pagination: Given more time and a backend that supports it, I would implement a proper pagination solution.
