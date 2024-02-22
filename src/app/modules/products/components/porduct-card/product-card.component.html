@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="card__img__container">
+    <img [src]="product.image" class="card__img__container__top" alt="Product Image">
+  </div>
+  <div class="card__body">
+    <h5 class="card__body__title">{{ product.title }}</h5>
+    <p class="card__body__text__description">{{ product.description }}</p>
+    <p class="card__body__text__price">Price: ${{ product.price }}</p>
+    <p class="card__body__text__category">Category: {{ product.category }}</p>
+  </div>
+  <div class="card__footer">
+    <button (click)="addToCart(product.id)" class="card__footer__add">Add To Cart</button>
+    <button (click)="removeItemFromCart(product.id)" class="card__footer__remove">Remove From Cart</button>
+  </div>
+</div>

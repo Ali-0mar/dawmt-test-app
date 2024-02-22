@@ -1,0 +1,33 @@
+/* search.component.css */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+select {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+.search__btn {
+  background-color: #f9af42;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}

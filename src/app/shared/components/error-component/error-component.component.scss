@@ -1,0 +1,29 @@
+.error-container {
+  width: 100%;
+  min-height: 260px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100px;
+}
+.error-icon {
+  display: block;
+  width: 200px;
+}
+
+.error-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #343a40;
+}
+
+.error-reload-button {
+  color: #343a40;
+  cursor: pointer;
+}
+
+.error-icon,
+.error-title, {
+  margin: auto;
+  vertical-align: middle;
+}

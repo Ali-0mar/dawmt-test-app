@@ -1,0 +1,9 @@
+<div class="search-container">
+  <select (change)="onSelectionChange($event)">
+    <option value="" disabled selected>Select search field</option>
+    <option value="title">Title</option>
+    <option value="category">Category</option>
+  </select>
+  <input type="text" placeholder="What are looking for" [(ngModel)]="searchValue" [hidden]="!showTextInput">
+  <button type="button" (click)="emitSearch()" class="search__btn">Search</button>
+</div>

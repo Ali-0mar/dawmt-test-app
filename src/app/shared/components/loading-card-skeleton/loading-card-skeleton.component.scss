@@ -1,0 +1,38 @@
+/* card.component.css */
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 400px;
+  height: 250px;
+}
+
+.card.loading {
+  opacity: 0.5; /* Dim the loading skeleton */
+  pointer-events: none; /* Prevent interaction with the skeleton */
+}
+
+.skeleton {
+  background-color: rgba(117, 133, 241, 0.69);
+  height: 20px;
+  margin-bottom: 10px;
+  width: 100%;
+  animation: loadingAnimation 1s infinite alternate; /* Add animation */
+}
+
+.skeleton.header {
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+
+
+@keyframes loadingAnimation {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,17 @@
+<div class="product__list" [@fadeIn]="products.length" *ngIf="!_loading">
+  <div *ngFor="let product of products">
+    <app-product-card [product]="product"></app-product-card>
+  </div>
+</div>
+<div class="product__list" *ngIf="_loading">
+  <div *ngFor="let item of [1,2,3,4,5]">
+    <app-loading-card-skeleton [isLoading]="_loading"></app-loading-card-skeleton>
+  </div>
+</div>
+<div *ngIf="_hasError">
+  <app-error-component></app-error-component>
+</div>
+
+<div *ngIf="!_loading && !_hasError && !products.length">
+  <p>Sorry No products Found..........</p>
+</div>
