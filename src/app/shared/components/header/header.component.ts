@@ -12,6 +12,4 @@ import {SearchInputComponent} from "../search-input/search-input.component";
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
-
-}
+export class HeaderComponent { }

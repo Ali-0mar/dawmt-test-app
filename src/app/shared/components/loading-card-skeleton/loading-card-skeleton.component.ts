@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-loading-card-skeleton',
@@ -7,7 +7,4 @@ import {Component, Input} from '@angular/core';
   templateUrl: './loading-card-skeleton.component.html',
   styleUrl: './loading-card-skeleton.component.scss'
 })
-export class LoadingCardSkeletonComponent {
-  @Input() isLoading: boolean = false;
-
-}
+export class LoadingCardSkeletonComponent {}

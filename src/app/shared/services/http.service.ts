@@ -17,6 +17,7 @@ export class HttpService {
     return this.http.get<T[]>(constructedEndpoint);
   }
 
+  // The API doesn't support pagination, so I only implemented a simulation of the response with pagination would look like
   getPaginatedData<T>(endpoint: string[], page: number, pageSize: number): Observable<IResponseWithPagination<T>> {
     const constructedEndpoint = this.constructQuery(endpoint);
     const params = {
@@ -27,7 +28,6 @@ export class HttpService {
   }
 
   private constructQuery(endpoint: string[]): string {
-    // Join the array of endpoint strings to construct the full endpoint
     return HTTP_BASE_URL + endpoint.join('/');
   }
 }

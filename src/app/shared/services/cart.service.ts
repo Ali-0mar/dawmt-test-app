@@ -6,7 +6,6 @@ import {BehaviorSubject, map, Observable} from 'rxjs';
 })
 export class CartService {
   private itemsSubject: BehaviorSubject<{ productId: number, quantity: number }[]> = new BehaviorSubject<{ productId: number, quantity: number }[]>([]);
-  items$ = this.itemsSubject.asObservable();
 
   constructor() { }
 

@@ -9,6 +9,7 @@ import {HttpService} from "../../../../shared/services/http.service";
 import {ErrorComponentComponent} from "../../../../shared/components/error-component/error-component.component";
 import {SearchService} from "../../../../shared/services/search.service";
 import {Subject, takeUntil} from "rxjs";
+import IProduct from "../../interfaces/IProduct";
 
 @Component({
   selector: 'app-products-list',
@@ -36,7 +37,7 @@ import {Subject, takeUntil} from "rxjs";
   ]
 })
 export class ProductsListComponent implements OnInit, OnDestroy{
-  products: any[] = [];
+  products: IProduct[] = [];
   _loading = false;
   _hasError = false;
   _unSubscribeAll = new Subject<void>()
@@ -57,7 +58,7 @@ export class ProductsListComponent implements OnInit, OnDestroy{
   }
 
   fetchProducts(): void {
-    this.httpService.getData<any>(['products']).pipe(
+    this.httpService.getData<IProduct>(['products']).pipe(
       takeUntil(this._unSubscribeAll)
     ).subscribe({
       next: (data: any) => {
@@ -75,7 +76,7 @@ export class ProductsListComponent implements OnInit, OnDestroy{
   handleSearchChange(searchTerm: { field: 'title' | 'category', value: string }): void {
     if (searchTerm.field === 'category') {
       this._loading = true;
-      this.httpService.getData<any>(['products',"category", searchTerm.value.toLowerCase()]).subscribe({
+      this.httpService.getData<IProduct>(['products',"category", searchTerm.value.toLowerCase()]).subscribe({
         next: (data: any) => {
           this.products = data ?? [];
           this._loading = false;

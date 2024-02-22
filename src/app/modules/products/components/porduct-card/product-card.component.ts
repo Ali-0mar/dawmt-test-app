@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {CartService} from "../../../../shared/services/cart.service";
+import IProduct from "../../interfaces/IProduct";
 
 @Component({
   selector: 'app-product-card',
@@ -9,7 +10,7 @@ import {CartService} from "../../../../shared/services/cart.service";
   styleUrl: './product-card.component.scss'
 })
 export class ProductCardComponent {
-  @Input() product: any;
+  @Input() product!: IProduct;
 
   constructor(private cartService: CartService) {}
 
